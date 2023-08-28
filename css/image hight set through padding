@@ -1,0 +1,21 @@
+image hight set
+
+1. image above div css
+.mySlides {
+    padding-top: 43%;
+    position: relative;
+}
+
+2. main image div css 
+
+.mySlides img {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    object-fit: cover;
+}

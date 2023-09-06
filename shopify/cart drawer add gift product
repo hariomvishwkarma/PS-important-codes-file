@@ -1,0 +1,50 @@
+
+add this code cart drawer at bottom 
+
+        <div >
+              <button id="add-gift" class="ajaxcart__product">add gift</button>
+        </div>   
+
+
+this code cart.js.  yah cart.js ka ccode he isme jaha add code likha he vah add karna he. yah sirf cart drawer me chalega . isme product ki variant add karna he
+
+var  cartd = ''; //add code
+class CartItems extends HTMLElement {
+  constructor() {
+    super();
+    cartd = this; //add code
+    this.lineItemStatusElement =
+      document.getElementById('shopping-cart-line-item-status') || document.getElementById('CartDrawer-LineItemStatus');
+
+    const debouncedOnChange = debounce((event) => {
+      this.onChange(event);
+    }, ON_CHANGE_DEBOUNCE_TIMER);
+
+    this.addEventListener('change', debouncedOnChange.bind(this));
+    this.Addgift(); //add code
+  }
+
+  cartUpdateUnsubscriber = undefined;
+
+  //add code
+  Addgift(_this){
+     document.querySelector('.ajaxcart__product').addEventListener('click', function () {
+      $.ajax({
+         type: 'POST',
+          url: '/cart/add.js',
+          dataType: 'json',
+          data: {
+            id: 42482524586179,
+            quantity: 1
+          },
+          success: function (data) {
+            console.log('success');
+            cartd.onCartUpdate();
+            $('#add-gift').addClass('gift_hide');
+          }
+      })
+    })
+  }
+}
+
+customElements.define('cart-items', CartItems);

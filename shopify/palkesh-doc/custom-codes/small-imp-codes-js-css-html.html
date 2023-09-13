@@ -827,3 +827,35 @@ div.cus_agree label a{
 	</div>
 
 <!-- ----------End variant products image set position Collection page --------------- -->
+
+
+<!-- Start first product variant quantity less then or equal to 0 -->
+
+  {% if product.variants.first.inventory_quantity <= 0 %}
+               {{ 'products.product.sold_out' | t }}
+            {% else %}
+            {{ 'products.product.add_to_cart' | t }}
+            {% endif %}
+<!-- End first product variant quantity less then or equal to 0 -->
+
+
+
+<!-- Start Custom redirection to products -->
+  <script>
+        const btn = document.querySelector('#cus-v-btn');        
+        const radioButtons = document.querySelectorAll('input[name="size"]');
+        btn.addEventListener("click", () => {
+            let selectedSize;
+            for (const radioButton of radioButtons) {
+                if (radioButton.checked) {
+                    selectedSize = radioButton.value;
+                    break;
+                }
+              
+            }
+          window.location.href = `/products/${selectedSize}`
+            // show the output:
+            output.innerText = selectedSize ? `You selected ${selectedSize}` : `You haven't selected any size`;
+        });
+    </script>
+<!-- End Start Custom redirection to products -->

@@ -48,3 +48,70 @@ class CartItems extends HTMLElement {
 }
 
 customElements.define('cart-items', CartItems);
+
+
+
+css 
+
+<style>
+/* cart gift product css may 12 2023 */
+div#add-gift {
+    display: block;
+    position:relative;
+}
+div#add-gift:before{
+    content:'';
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    cursor:pointer;
+    z-index:2;
+}
+#add-gift .grid {
+    flex-wrap: nowrap;
+}
+#add-gift .grid .one-third {
+  max-width:  33.333%; 
+  width: 100%;
+}
+#add-gift .grid .two-thirds {
+  width: 100%;
+  max-width:60%;
+}
+#add-gift .grid .one-third .ajaxcart__product-image {
+    display: block;
+    overflow: hidden;
+    padding-top: 3px;
+}
+#add-gift .grid .one-third .ajaxcart__product-image img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+#add-gift .grid .two-thirds .ajax-padder {
+    padding-right: 25px;
+}
+#add-gift .grid .two-thirds .ajaxcart__product-name--wrapper {
+    margin-bottom: 10px;
+}
+#add-gift .grid .two-thirds .ajaxcart__product-name {
+    font-size: 17px;
+    line-height: 1.3;
+}
+#add-gift .grid .two-thirds .ajaxcart__product-name, 
+#add-gift .grid .two-thirds .ajaxcart__product-meta {
+    display: block;
+}
+#add-gift .grid .two-thirds .text-right {
+    text-align: right!important;
+}
+#add-gift .grid .two-thirds .display-non {
+    display: none!important;
+}
+#add-gift.gift_hide {
+    display: none !important;
+}
+
+</style>

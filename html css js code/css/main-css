@@ -3,7 +3,7 @@
 @media only screen and (max-width: 1023px) {
 }
 
-2.  media query min to max
+2.media query min to max
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
 }
 

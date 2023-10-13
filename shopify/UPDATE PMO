@@ -1,52 +1,102 @@
 Hello Sir,
 
-Store Name - shopify Dezaia
+Store Name -  The Cookie Box
 
-Theme Name - Copy of Spotlight[ps-19-09-2023]
+Theme Name -  Copy of ZAPIET OS2[ps-26-09-2023] HV
 
-Preview Link - https://dezaia.com/?_ab=0&_fd=0&_sc=1&key=454a5fd46fd94c6c94d76049341d2417fab8fc37c024f35872f159d031eef6af&preview_theme_id=153160286544
+Preview Link - https://thecookiebox.com.au/?_ab=0&_fd=0&_sc=1&preview_theme_id=131538387096
+    
+HAPPY BIRTHDAY PAGE: https://thecookiebox.com.au/collections/happy-birthday
 
-Decrease font size by 4pt.
-Add vendor name. (OVERSIZED T-SHIRT on the picture below is the vendor name) - https://prnt.sc/5FipBiVeVKN3
+Product 1: Box of six cookies: 
+- Change name box of six cookie to Build your own
+- Change description – “Build your own box and send a memorable “Happy birthday” gift”
+------Done. 
 
-Reply : Done
+Product 2: Giant Cookie: 
+- Add a description: “Want to make a Birthday impression? Go crazy with our giant cookie of 650g or 1kg.
+------Done. 
 
-Checkout page Change font of all text to Space Mono - https://prnt.sc/N8gN_FG4IjBt
-Reply : Please send access checkout page - https://prnt.sc/3U8-Fa7UUpfV
+Product 3: The Favourites
+- Change name the Favourite to “Mixed flavours” 
+- Add description: “Want to surprise but you don’t what they prefer? Let them try all our flavours!
+------Done. 
 
-Collapsible row “Details” should show product description. 
-Reply : please add description in product - 
+Product 4: Choco Lovers:
+-Add description: You know someone who loves chocolate? This box is the perfect gift for need.
+------Done. 
 
-When choosing color, hide images of other variants.
-Example: Black is the default color. Images of white T-shirts should be hidden until the color White is
-selected. When White is selected, images with black T-shirts become hidden. - https://prnt.sc/DtUjCNHp1Fj0
+Collections:
+- Please remove collection list.
+------Done. 
 
-Reply : Please send access in product - https://prnt.sc/q0YNTKcmIIfa
+Happy Birthday / Giant Cookie: https://thecookiebox.com.au/apps/builder?b=ESB3qP32R3f7ksryVqnnnyQv
+
+1. Remove the white line at the top of the page.
+------Done. 
+
+2. Can we use normal Shopify products? (Not app builder)
+------It will be made but its bundle will not be possible.. 
+
+3. Can we have multiple photos for the product?
+------yes you can use multiple photos for the product. please add product photo. See the screenshot 
+
+4. Add description to the cookie.
+“Introducing the Ultimate Cookie: Our 650g Giant Cookie!
+Are you ready to take your love for cookies to the next level? Say hello to our 650g Giant Cookie, the ultimate treat for all cookie connoisseurs and sweet tooth enthusiasts!” 
+------Done. 
+
+5. Can we create two products instead of one?
+Giant cookie 605g (drop down with all flavours)
+Giant Cookie 1kg cookie (drop down with all flavours)
+------Done. 
+
+6. If we can’t remove App builder, and create a normal product on Shopify, 
+can change the button “Add to box” to “Add to order”. (For this page only)
+------This is not possible beacouse this funtionality not available in app. 
+
+Happy Birthday / The favourite: https://thecookiebox.com.au/apps/builder?b=Kf1b8yucjQo1358NM7WlxYVj
+
+• Remove the white line at the top of the page.
+------Done. 
+
+• Can we please have a normal Shopify product here? 
+Not using App builder.
+------It will be made but its bundle will not be possible.
+
+• Add two product photos with a description. (Add any photos for now)
+Description: Can't decide which delicious cookie to choose? Love them all? Our Variety Box is the perfect solution for you! This box includes all six of our six flavours. *Contains Dairy, Gluten, Nuts: See the ingredient description of each cookie in. our menu page.
+------Done. 
+
+Happy Birthday / Chocolate Lover: https://thecookiebox.com.au/apps/builder?b=XXd9KgrpzlJdTliLWxSoyzLz
+
+Remove the white line.
+------Done. 
+
+Can we please have a normal Shopify product here? 
+Not using App builder 
+------It will be made but its bundle will not be possible.
+
+Add two products photo and a description. 
+It's a pre-made box with 6 cookies, two of each. 
+Description: “Are you a certified chocoholic? Well, you're in for a treat like no other! Our irresistible assortment of 6 chocolate-packed cookies is guaranteed to make you swoon with every decadent bite.”
+------Done. 
+
+- GIFT CARD
+
+- Can we have the gift card as a featured item, with a photo under the product? 
+------yes. See the screenshot - https://prnt.sc/n9qosGMYMxLc
+
+“Last chance to add on?”
+Gift card photo – (if they add on, customer can add the text they want)
+Example: 
+https://www.bloomeroo.com.au/cart
+------Work in progress. 
+
+- “Is this a gift” page should completely disappear from every product on the website. 
+------Done. 
+
 Thank you
-
-When using logo the header becomes bigger.
-I want to put a logo without changing the header size. - https://prnt.sc/IEGqH4IZCC28
-Reply : Done 
-
-On both desktop and mobile the image numbering ( < 1/3 > ) should reach the bottom of page. - https://prnt.sc/_9Hn84vZ-nYf
-Reply : Not Done
-
-Logo on password page should be in the center.
-(Do not forget to do the same for mobile.) - https://prnt.sc/YXqdqjyd6wT_
-Reply : Done.
-
-Increase font size by 2pt.Increase font size by 2pt. - https://prnt.sc/HKyn6ynoMz3s
-Reply: Done.
-
-It should look like the picture below. (Same text color as the default option with black background) - https://prnt.sc/K9rehsS2KW3j
-Reply : Done.
-
-This should have some top padding or should be put on a new line to have some space from the
-payment method icons.
-Also change the text alignment to center.
-Change the text alignment to center - https://prnt.sc/WDBZEZtucarZ
-Reply: Done.
-
 ================================================================================================
 =
 Hello Sir,

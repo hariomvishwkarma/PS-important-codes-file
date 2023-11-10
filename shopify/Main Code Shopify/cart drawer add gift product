@@ -1,10 +1,68 @@
+<style>
+.drawer .title-wrapper-with-link {
+    display: none;
+}  
+.drawer th.cart-items__heading--wide.small-hide.caption-with-letter-spacing {
+    display: none;
+}
+.drawer .main-gift-add-button {
+    display: none;
+}
+
+.drawer  td.cart-item__totals.right.small-hide {
+    padding-top: 0px;
+    grid-column: 4 / 5;
+    grid-row: 1/2;
+    align-items: center;
+}  
+  .drawer {
+    visibility: hidden;
+  }
+.ajaxcart__product:before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url(https://cdn.shopify.com/s/files/1/0717/6015/files/gift-circle.svg?v=1699596352);
+    border-radius: 5px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.ajaxcart__product {
+    background: none;
+    border: none;
+    text-transform: capitalize;
+    font-size: 19px;
+  cursor:pointer;
+}  
+.gift-add-button {
+    text-align: center;
+    margin-bottom: 12px;
+}  
+.main-gift-add-button {
+    margin-top: 20px;
+}
+</style>
 
 add this code cart drawer at bottom 
 
-        <div >
-              <button id="add-gift" class="ajaxcart__product">add gift</button>
-        </div>   
+<div class="main-gift-add-button">
+  <button id="add-gift-main" class="ajaxcart__product">ADD GIFT BAG</button>
+</div>  
+<div class="gift-add-button">
+  <button id="add-gift-secondary" class="ajaxcart__product">ADD GIFT BAG</button>
+</div>  
 
+{
+agar button ko hide kafrna ho agar gift product already he cart me 
+  {%- for item in cart.items -%}
+    {% if forloop.index == 1 %}
+      <div class="main-gift-add-button {% if item.title == "Gift Product" %}hidden{% endif %}">
+        <button id="add-gift-main" class="add-gift ajaxcart__product">ADD GIFT BAG</button>
+      </div> 
+      {% endif %}
+    {% endfor %}
+}
 
 this code cart.js.  yah cart.js ka ccode he isme jaha add code likha he vah add karna he. yah sirf cart drawer me chalega . isme product ki variant add karna he
 
@@ -27,91 +85,66 @@ class CartItems extends HTMLElement {
   cartUpdateUnsubscriber = undefined;
 
   //add code
-  Addgift(_this){
-     document.querySelector('.ajaxcart__product').addEventListener('click', function () {
-      $.ajax({
-         type: 'POST',
+  Addgift(_this) {
+    // Use class selector to select both buttons
+    document.querySelectorAll('.ajaxcart__product').forEach(function(button) {
+      button.addEventListener('click', function() {
+        $.ajax({
+          type: 'POST',
           url: '/cart/add.js',
           dataType: 'json',
           data: {
-            id: 42482524586179,
+            id: 40741056905258,
             quantity: 1
           },
-          success: function (data) {
+          success: function(data) {
             console.log('success');
             cartd.onCartUpdate();
-            $('#add-gift').addClass('gift_hide');
+            $('.add-gift').addClass('gift_hide');
           }
-      })
-    })
-  }
-}
+        });
+      });
+    });
+  }  
 
 customElements.define('cart-items', CartItems);
 
 
 
-css 
 
-<style>
-/* cart gift product css may 12 2023 */
-div#add-gift {
-    display: block;
-    position:relative;
-}
-div#add-gift:before{
-    content:'';
-    position:absolute;
-    width:100%;
-    height:100%;
-    top:0;
-    left:0;
-    cursor:pointer;
-    z-index:2;
-}
-#add-gift .grid {
-    flex-wrap: nowrap;
-}
-#add-gift .grid .one-third {
-  max-width:  33.333%; 
-  width: 100%;
-}
-#add-gift .grid .two-thirds {
-  width: 100%;
-  max-width:60%;
-}
-#add-gift .grid .one-third .ajaxcart__product-image {
-    display: block;
-    overflow: hidden;
-    padding-top: 3px;
-}
-#add-gift .grid .one-third .ajaxcart__product-image img {
-    display: block;
-    margin: 0 auto;
-    max-width: 100%;
-}
-#add-gift .grid .two-thirds .ajax-padder {
-    padding-right: 25px;
-}
-#add-gift .grid .two-thirds .ajaxcart__product-name--wrapper {
-    margin-bottom: 10px;
-}
-#add-gift .grid .two-thirds .ajaxcart__product-name {
-    font-size: 17px;
-    line-height: 1.3;
-}
-#add-gift .grid .two-thirds .ajaxcart__product-name, 
-#add-gift .grid .two-thirds .ajaxcart__product-meta {
-    display: block;
-}
-#add-gift .grid .two-thirds .text-right {
-    text-align: right!important;
-}
-#add-gift .grid .two-thirds .display-non {
-    display: none!important;
-}
-#add-gift.gift_hide {
-    display: none !important;
-}
 
-</style>
+
+
+
+
+
+
+
+
+
+
+
+
+agar button tabhi show karana ho jab cart me gift ptoduct na ho product add hone ke baad button hide ho jayega
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> 
+<script>
+  $(document).ready(function() {
+  //yah class add karni he main-cart me show-gift-button class="button button--tertiary {% if item.title == "Gift Product" %}show-gift-button{% endif %}"
+     $(".show-gift-button").click(function() {
+       setTimeout(() => {
+       $(".main-gift-add-button").removeClass('hidden');
+     }, "1000");
+   }); 
+ });   
+$(document).on("click", ".gift-add-button", function() {
+  setTimeout(() => {
+    $(".gift-add-button").css("display", "none");
+    // alert("Sadsad");
+   }, "1000");
+});
+
+ 
+</script>
+
+
+

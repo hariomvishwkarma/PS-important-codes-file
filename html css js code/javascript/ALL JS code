@@ -18,7 +18,8 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <!-- slick slider  -->
 
-    $(document).ready(function() {
+<script>
+$(document).ready(function() {
     $('.second-sec-slider').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
@@ -50,7 +51,7 @@
         ]
     });
 });
-
+</script>
 4. font awesom cdn - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css
 
 5. click to refresh body tag without page reload through ajax.
@@ -108,3 +109,41 @@ $(document).ready(function () {
     dropdown.trigger('change');
   });
 </script>    
+
+
+9. trigger js -  agar custom variant he uske click par original vaiant par trigger click karana ho to.
+
+$(document).ready(function () {
+    $('.opt-label').on('click', function () {
+      var clickedAriaLabel = $(this).attr('aria-label');
+      
+      // Check if there is a matching element with class 'cus-fs-bodu-label-var'
+      $('.cus-fs-bodu-label-var').each(function () {
+        var targetAriaLabel = $(this).attr('aria-label');
+
+        // If the aria-label values match, trigger a click event
+        if (clickedAriaLabel === targetAriaLabel) {
+          $(this).trigger('click');
+        }
+      });
+    });
+  });   
+
+  10. click karane ke baaad kisi data ko append karane ke liye
+  
+    $(document).ready(function () {
+    $('.opt-label').on('click', function () {
+      var clickedAriaLabel = $(this).attr('aria-label');
+      
+      // Check if there is a matching element with class 'cus-fs-bodu-label-var'
+      $('.cus-fs-bodu-label-var').each(function () {
+        var targetAriaLabel = $(this).attr('aria-label');
+
+        // If the aria-label values match, update the content of append-price-pop
+        if (clickedAriaLabel === targetAriaLabel) {
+          var price = $('[data-price]').text().trim();
+          $('.append-price-pop').text(price); // Update the content
+        }
+      });
+    });
+  });

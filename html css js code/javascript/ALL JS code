@@ -1,12 +1,15 @@
 
-1. Jquery cdn- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> 
+1. Jquery cdn- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+--------------------------------------------------------------------------------------------------------------------------
 
 2. jquery alert - $(document).ready(function() {
-                 $(".click-c").click(function() {
-                   alert("You clicked on an element with the 'sold-out' class!");
-                 });
-               }); 
+                     $("..show-gift-button").click(function() {
+                       $(".custom-model-main").removeClass('model-open');
+                     });
+                   }); 
 
+--------------------------------------------------------------------------------------------------------------------------
 
 3. slick slider CDN - 
   <!-- slick slider  -->
@@ -52,7 +55,12 @@ $(document).ready(function() {
     });
 });
 </script>
+
+--------------------------------------------------------------------------------------------------------------------------
+
 4. font awesom cdn - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css
+
+--------------------------------------------------------------------------------------------------------------------------
 
 5. click to refresh body tag without page reload through ajax.
 $(document).ready(function () {
@@ -73,13 +81,15 @@ $(document).ready(function () {
     });
 });
 
+--------------------------------------------------------------------------------------------------------------------------
+
 6. scroll - 
 
-  $("#image-with-forms").click(function() {
-            $('html, body').animate({
-                scrollTop: $("#image-with-form").offset().top
-            }, 1000);
-        });
+  $(".custom-color-swatch-collection").click(function() {
+      alert("asdf");
+  }); 
+
+--------------------------------------------------------------------------------------------------------------------------
 
 7. click class to change specific div
 
@@ -94,6 +104,7 @@ $(document).ready(function () {
         $(".buy-buttons button[type='submit']").trigger('click');
     });
 
+--------------------------------------------------------------------------------------------------------------------------
 
 8. input select to change dropdown
 
@@ -110,6 +121,7 @@ $(document).ready(function () {
   });
 </script>    
 
+--------------------------------------------------------------------------------------------------------------------------
 
 9. trigger js -  agar custom variant he uske click par original vaiant par trigger click karana ho to.
 
@@ -129,9 +141,11 @@ $(document).ready(function () {
     });
   });   
 
-  10. click karane ke baaad kisi data ko append karane ke liye
+--------------------------------------------------------------------------------------------------------------------------
+
+10. click karane ke baaad kisi data ko append karane ke liye
   
-    $(document).ready(function () {
+$(document).ready(function () {
     $('.opt-label').on('click', function () {
       var clickedAriaLabel = $(this).attr('aria-label');
       
@@ -146,4 +160,55 @@ $(document).ready(function () {
         }
       });
     });
+});
+
+--------------------------------------------------------------------------------------------------------------------------
+
+11. textarea me text ko dusre textarea me trigger print karana
+
+jisme text print hoga
+<textarea name="attributes[GIFT MESSAGE]"  id="CartNotedr" placeholder="How may we help you?" rows="4" >{{ cart.note }}</textarea>
+ 
+jisme text type karenge
+<textarea name="attributes[GIFT MESSAGE]" class="input-textarea-note" placeholder="How may we help you?" rows="4" id="sourceTextarea" oninput="transferText()"></textarea>
+
+<script>
+  function transferText() {
+    // Get the text from the source textarea
+    var sourceText = document.getElementById('sourceTextarea').value;
+    
+    // Set the value property of the destination textarea
+    document.getElementById('CartNotedr').value = sourceText;
+  }
+</script>
+
+--------------------------------------------------------------------------------------------------------------------------
+
+12. trigger buy button - 
+  document.addEventListener("DOMContentLoaded", function() {
+    var addToCartButton = document.querySelector('.custom-model-inner .close-btn, .bg-overlay');
+
+    addToCartButton.addEventListener('click', function() {
+      // Trigger the buy button click event
+      var buyButton = document.querySelector('.c-buy-buttons [type="submit"]');
+      if (buyButton) {
+        buyButton.click();
+      }
+    });
   });
+
+--------------------------------------------------------------------------------------------------------------------------
+
+13. same class forloop click to display none block
+<script>
+  {% for variant in product.variants %}
+    $(".cus-var-{{ forloop.index0 }}").on("click", function() {
+      // Hide all product-variant-img elements
+      $(".product-variant-img").css("display", "none");
+      
+      // Show the corresponding product-variant-img element with display: flex;
+      $(".product-variant-img.cus-var-{{ forloop.index0 }}").css("display", "flex");
+    });
+  {% endfor %}
+</script>
+

@@ -68,14 +68,19 @@ Add this CSS at main-collection-product-grid.liquid at bottom
 </style>
 
 step - 4
-Find this code <div class="card-wrapper product-card-wrapper underline-links-hover">
+Find this code in card-product<div class="card-wrapper product-card-wrapper underline-links-hover">
  Add this class (custom-card__content) to this code{<div class="custom-card__content card-wrapper product-card-wrapper underline-links-hover">}
  
+ find this css ( class="motion-reduce" ) first no. vali
+add this css ( main-cus-img-c )
+
+
 Add this CSS at base.css at bottom
 /* collection page color swatch  */
 .custom-card__content {
     height: 92% !important;
 }
+
 
 
 

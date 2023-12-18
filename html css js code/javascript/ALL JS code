@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css"/>
     <!-- slick slider  -->          
  <!-- slick slider  -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <!-- slick slider  -->
 
@@ -210,5 +210,60 @@ jisme text type karenge
       $(".product-variant-img.cus-var-{{ forloop.index0 }}").css("display", "flex");
     });
   {% endfor %}
+</script>
+
+--------------------------------------------------------------------------------------------------------------------------
+
+14. Swiper slider
+<!-- Swiper slider styles -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- Swiper slider script -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- Your HTML structure for the slider -->
+<div class="swiper-container second-sec-slider">
+  <div class="swiper-wrapper">
+    <!-- Slide 1 -->
+    <div class="swiper-slide">Your content for slide 1</div>
+    <!-- Slide 2 -->
+    <div class="swiper-slide">Your content for slide 2</div>
+    <!-- Add more slides as needed -->
+  </div>
+
+  <!-- Add Pagination -->
+  <div class="swiper-pagination"></div>
+  <!-- Add Navigation -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>
+
+<!-- Swiper slider initialization script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var mySwiper = new Swiper('.second-sec-slider', {
+      slidesPerView: 4,
+      spaceBetween: 15,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        992: {
+          slidesPerView: 3,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        596: {
+          slidesPerView: 1,
+        },
+      },
+    });
+  });
 </script>
 

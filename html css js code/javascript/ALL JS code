@@ -9,6 +9,7 @@
                      });
                    }); 
 
+
 --------------------------------------------------------------------------------------------------------------------------
 
 3. slick slider CDN - 
@@ -58,7 +59,7 @@ $(document).ready(function() {
 
 --------------------------------------------------------------------------------------------------------------------------
 
-4. font awesom cdn - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css
+4. font awesom cdn - https://cdnjs.cloudflare.com/ajax/libs/font- /6.4.0/css/all.min.css
 
 --------------------------------------------------------------------------------------------------------------------------
 
@@ -267,3 +268,66 @@ jisme text type karenge
   });
 </script>
 
+--------------------------------------------------------------------------------------------------------------------------
+15. Image src click to append other image src. kisi bhi tag par click karne par uske attribute ka data or kisi tag ke attribute par aappend hoga.
+
+<script>
+$(document).ready(function() {
+    $(".product-page--thumb img").on("click", function(){
+        // Get the data-srcset attribute value of the clicked image
+        var imageDataSrcset = $(this).attr("data-srcset");
+
+        // Update the srcset attribute of the image with the clicked image's data-srcset
+        $(".swiper-slide-active img").attr("srcset", imageDataSrcset);
+    });
+});
+
+</script>
+
+--------------------------------------------------------------------------------------------------------------------------
+
+16. click to append div - kisi bhi div par click karne par usko kisi or div me append karana.
+
+$(document).ready(function () {
+  // When a div with class 'source-div' is clicked
+  $(".product-single__video video, .product-page--thumb .image--root").on("click", function () {
+    // Show the text content of the clicked div in the div with id 'targetDiv'
+    $(".product-page--image").append($(this).clone());
+  });
+});
+
+click to remove and add div.
+$(document).ready(function () {
+  // When a div with class 'source-div' is clicked
+  $(".product-single__video video, .product-page--thumb .image--root").on("click", function () {
+    // Remove any previously added images
+    $(".swiper-slide-active .product-page--image video, .swiper-slide-active .product-page--image .image--root").remove();
+
+    // Add the clicked image
+    $(".second-sec-slider .swiper-slide-active .product-page--image").append($(this).clone());
+  });
+});
+
+--------------------------------------------------------------------------------------------------------------------------
+17.
+<script>
+    function validateInputs() {
+        var customertagValue = document.getElementById('customertag').value;
+        var specialInstructionsValue = document.getElementById('CartSpecialInstructions').value;
+
+        if (customertagValue.trim() === '' || specialInstructionsValue.trim() === '') {
+        $(".ps-checkout-button button").prop("disabled", true);
+  $(".ps-checkout-button").css("cursor", "not-allowed");
+        } else {
+          $(".ps-checkout-button button").prop("disabled", false);
+ $(".ps-checkout-button").css("cursor", "pointer");
+        }
+    }
+  validateInputs()
+</script>
+
+--------------------------------------------------------------------------------------------------------------------------
+18.
+
+ var buttonText = item.tags.includes('coming soon') ? 'Coming soon' : '{{ 'products.product.sold_out' | t }}';
+  addToCartButton = "<input type='submit' class='disabled' disabled='disabled' value='" + buttonText + "' />";

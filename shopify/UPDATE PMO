@@ -1,17 +1,17 @@
 Hello Sir,
 
-Store Name -  Gownies™
+Theme Name -  Live Grid Theme (August 2017)[ps-08-01-2024]
 
-Theme Name -  Gownies New Store - SOFIA [ps-30-11-2023]
+Preview Link - https://pinkhazel.eu/?_ab=0&_fd=0&_sc=1&preview_theme_id=157302849879
 
-Preview Link - https://www.gownies.com/?_ab=0&_fd=0&_sc=1&preview_theme_id=123293892671
-    
-I hope you have been well! We have run into an issue on the Gownies site that I was wondering if you could look into and fix for us.
+1. I have very fast selling items and would like an item to be reserved for 5 minutes in the cart. Currently more than one person can add an item and the person who checks out the fastest gets the item. Other customers are very disappointed when the item disappears out of their cart. 
+--- We need to use Shopify app like https://apps.shopify.com/conversion-pro-plus
+Should I install the conversion pro plus app or will you do it for me?
+-----Done. See the screenshot - https://prnt.sc/P7RnVKs9hHmW
 
-When the customer checks out, we can not see the gift message they typed. It seems to disappear. We do not have this issue on Baby Be Mine, just the Gownies site.
-
-Please let me know if you can fix this, it needs to be done ASAP as people are ordering these for the holidays. And please let me know the price as well.
----There is no access to the order page in the admin panel due to which I am not able to see the gift message. I need access to the admin panel. thank you See the screenshot - https://prnt.sc/B73mJZJ2xPOn
+2. The second option I am interested in is a 'coming soon' button. I mostly add product photos to my website ahead of an update and would like to differentiate between the websites provided 'sold out' button and the items to come.
+--- If you want to accept any pre-orders, then you can use the Shopify app. Otherwise, we can just create a custom button saying "Coming Soon" for such products based on product tag, which can later be turned off and replaced with the Add to Cart button when you want to start selling.
+-----When Coming Soon is to be shown in a product instead of Soldm out, then Coming Soon will have to be added in the tag of that product. See the video - https://www.awesomescreenshot.com/video/23848837?key=85a30c8658a6cd9cc4b224cd8851e5d9
 
 Thank you
 
@@ -131,6 +131,8 @@ LCP:__1.5s
 CLS:__0.94
 Google pagespeed (desktop): __57%,__ https://prnt.sc/Haf3oK_S6tOj
 Google pagespeed (mobile): __16%,__ https://prnt.sc/TgMI5Y-15dQ8
+
+
 After speed optimization:
 GTmetrix: __78%,__ https://prnt.sc/3Wvw6WWyy9Nl
 LCP:__1.5s
@@ -149,7 +151,7 @@ As you need help to improve your site speed, I have fullfilled all parameter whi
 ------Done.
 - Eliminate Render-blocking resources
 ------Done.
-Defer offscreen images
+Defer offscreen imageshttps://prnt.sc/RoBoMI6PRtQG
 ------Done.
 You are using so many apps so the site is taking time to load. So we can't do more than that but I have done as much as possible.I hope you understand me better.
 You can check and publish the theme now. if any feedback then let me know.

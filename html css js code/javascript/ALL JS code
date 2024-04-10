@@ -328,3 +328,12 @@ $(document).ready(function () {
 
  var buttonText = item.tags.includes('coming soon') ? 'Coming soon' : '{{ 'products.product.sold_out' | t }}';
   addToCartButton = "<input type='submit' class='disabled' disabled='disabled' value='" + buttonText + "' />";
+
+19. Error remove
+
+<script language="JavaScript">
+    function suppressJSError() {
+    return true;
+    }
+    window.onerror=suppressJSError;
+    </script>

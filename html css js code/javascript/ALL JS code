@@ -54,7 +54,7 @@ $(document).ready(function() {
     });
 });
 </script>
-
+ 
 --------------------------------------------------------------------------------------------------------------------------
 
 4. font awesom cdn - https://cdnjs.cloudflare.com/ajax/libs/font- /6.4.0/css/all.min.css
@@ -329,7 +329,7 @@ $(document).ready(function () {
  var buttonText = item.tags.includes('coming soon') ? 'Coming soon' : '{{ 'products.product.sold_out' | t }}';
   addToCartButton = "<input type='submit' class='disabled' disabled='disabled' value='" + buttonText + "' />";
 
-19. Error remove
+19. console Error remove
 
 <script language="JavaScript">
     function suppressJSError() {

@@ -63,3 +63,22 @@ each variant link add through metafeild. product ke variant me link add karna pr
       variants     
    </a>
 {% endfor %}
+
+
+
+
+
+collection page product variant link
+
+
+ {% if product.metafields.custom.color_variant != blank %}
+        {% assign arr_color_list_product = product.metafields.custom.color_variant.value %}
+        {% for newproduct in arr_color_list_product %}
+          {% if product.title ==  newproduct.product.title %}
+            {% assign np = newproduct.url %}
+            {% endif %}
+          {% endfor %}
+        {% else %}
+        {% assign np = product.url %}
+        {% endif %}        
+       <a href="{{ np

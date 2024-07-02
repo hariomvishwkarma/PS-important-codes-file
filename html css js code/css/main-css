@@ -1,7 +1,7 @@
 /* custom css by PS Hari */
 
 1.media query 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 767px) {
 }
 
 2.media query min to max
@@ -77,3 +77,30 @@ button.shopify-payment-button__more-options:after {
     top: 0;
     height: max-content;
 }
+
+
+background: rgb(190,195,201);
+background: linear-gradient(29deg, rgba(190,195,201,1) 0%, rgba(247,247,247,1) 32%, rgba(190,195,201,1) 100%);
+
+
+8.
+Button box shadov remove:-
+::after {
+    box-shadow: none !important;
+}
+
+
+9. Anccor tag full div capture :-
+.product-sticky {
+  position:relative;
+}  
+.popup-ps-main::after {
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  display: block;
+} 

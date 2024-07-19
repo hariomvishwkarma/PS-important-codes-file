@@ -19,3 +19,29 @@
 <button type="submit" name="add">Add to cart</button>
 </div>
 </form>
+
+jab me label par click karu tab uske attribure variant id ki value button ke onclick function ke andar is value (44650629169448) ke andar append ho jae 
+<button type="button" onclick="add_to_cart_grid(44650629169448,1)" class="btn btn--full">Add to cart</button> varClicks   ke click karne par uska attribute variant-id ki value button ke onlick attr ki variant id change ho jae.
+
+<label variant-id="44650629169448" class="ps-variant" for="ps-var-0">black</label>
+<script>
+  function add_to_cart_grid(variantid,qty){
+    var id = variantid;
+    var q = qty;
+    var ajax = {
+        type: "POST",
+        url: "/cart/add.js",
+        data: "quantity=" + q + "&id=" + id,
+        dataType: "json",
+        success: function (n) {
+          var cart = new theme.CartDrawer
+          cart.init()
+          cart.open();
+        },
+        error: function (n, c) {
+           console.log('fail');
+        }
+     };
+    jQuery.ajax(ajax)
+  }
+</script>

@@ -107,3 +107,13 @@ Button box shadov remove:-
 
 la-mansio-bag - he
 la-mansio-half-pack - 0
+
+10. section heading border
+.ps-collection-list h2:after {
+    content: "";
+    height: 2px;
+    width: 50%;
+    background: #ff7d94;
+    display: block;
+    margin: 25px auto 15px;
+}
